@@ -30,9 +30,9 @@ if __name__ == '__main__':
         url = f'/device/control/summary?deviceId={ip}'
         control_connections = vmanage.get_request(url)
         try:
-            print(f'{ip}: vManage:{control_connections["data"][0]["vmanage_counts"]} vSmart:{control_connections["data"][0]["vsmart_counts"]}')
+            print(f'{ip:16} vManage:{control_connections["data"][0]["vmanage_counts"]:2} vSmart:{control_connections["data"][0]["vsmart_counts"]:2}')
         except Exception as e:
-            print(f'{ip}: Not Found')
+            print(f'{ip:16} Not Found')
 # [END gae_python38_app]
 
 
